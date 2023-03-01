@@ -2,48 +2,54 @@ const burger = document.querySelector(".burger-menu")
 const navMenu = document.querySelector(".nav-menu")
 const productsContainer = document.querySelector(".product-card-container")
 
-const dropdownBtn = document.querySelector("#tab-button");
-const dropdownMenu = document.querySelector("#dropdown");
-const toggleArrow = document.querySelector("#arrow");
+const dropdownBtn = document.querySelector(".tab-button");
+const dropdownMenu = document.querySelector(".dropdown");
+
 
 const laptops = [
     {
         name: "ThinkPad X1 Carbon Gen 8",
         price: "1.299,99",
         coupon: "YOGAPRESALE8",
-        img: "/resources/x1carb-8th.png",
+        img: "resources/x1carb-8th.png",
         doorbuster: true,
     },
     {
         name: "ThinkPad X1 Carbon Gen 8",
         price: "1.299,99",
         coupon: "YOGAPRESALE8",
-        img: "/resources/lenovo-laptop-thinkpad-x1-carbon-7th-gen-hero.webp",
+        img: "resources/lenovo-laptop-thinkpad-x1-carbon-7th-gen-hero.webp",
         doorbuster: false,
     },
     {
         name: "ThinkPad X1 Carbon Gen 8",
         price: "1.299,99",
         coupon: "YOGAPRESALE8",
-        img: "/resources/lenovo-laptop-thinkpad-x1-extreme-2nd-gen-hero.png",
+        img: "resources/lenovo-laptop-thinkpad-x1-extreme-2nd-gen-hero.png",
         doorbuster: false,
     },
     {
         name: "ThinkPad X1 Carbon Gen 8",
         price: "1.299,99",
         coupon: "YOGAPRESALE8",
-        img: "/resources/x1carb-8th.png",
+        img: "resources/x1carb-8th.png",
         doorbuster: true,
     },
 ]
 
 
+//Open/Closes mobile Burger menu
 burger.addEventListener("click", () => {
     burger.classList.toggle("open");
     navMenu.classList.toggle("open");
 })
 
-document.querySelectorAll(".nav-link").forEach(el => el.addEventListener)
+// Closes mobile Burger menu when clicking on a menu option
+document.querySelectorAll(".nav-link").forEach(el => el.addEventListener("click", ()=>{
+    burger.classList.toggle("open");
+    navMenu.classList.toggle("open");
+}))
+
 
 const buildCards = () => {
 
@@ -73,7 +79,6 @@ const buildCards = () => {
 
 const toggleDropdown = function () {
   dropdownMenu.classList.toggle("show");
-  toggleArrow.classList.toggle("arrow");
 };
 
 // Open/Closes dropdown
