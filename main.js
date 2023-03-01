@@ -54,7 +54,7 @@ const buildCards = () => {
             <span class="sale-label">DOORBUSTER</span>
             <img class="card-img" src="${el.img}">
             <p class="card-name">${el.name}</p>
-            <p class="card-price">$ ${el.price}</p>
+            <p class="card-price">$${el.price}</p>
             <p class="card-coupon">Use eCoupon: <span id="coupon">${el.coupon}</span></p>
             <button class="add-to-cart-button">Add to cart</button>
         </div>`
@@ -62,7 +62,7 @@ const buildCards = () => {
             productsContainer.innerHTML += `<div class="card">
             <img class="card-img" src="${el.img}">
             <p class="card-name">${el.name}</p>
-            <p class="card-price">$ ${el.price}</p>
+            <p class="card-price">$${el.price}</p>
             <p class="card-coupon">Use eCoupon: <span id="coupon">${el.coupon}</span></p>
             <button class="add-to-cart-button">Add to cart</button>
         </div>`

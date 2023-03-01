@@ -294,32 +294,8 @@
     background-color: #ccc;
 }
 
-
 .label input:checked~.checkmark {
     background-color: #000000;
-}
-
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-
-.label input:checked~.checkmark:after {
-    display: block;
-}
-
-
-.label .checkmark:after {
-    left: 6px;
-    top: 3px;
-    width: 5px;
-    height: 9px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
 }
 
 .filter-low-high-container {
@@ -358,6 +334,8 @@
 .card {
     display: flex;
     position: relative;
+    justify-content: center;
+    width: 80%;
     padding: 60px 15px 20px 15px;
     flex-direction: column;
     border: solid 0.5px #bcbcbc;
@@ -368,10 +346,11 @@
     color: #0d5c91;
     font-weight: bold;
     margin-top: 10px;
+    width: 100%;
 }
 
 .card-price {
-    margin: 20px 0 20px 0;
+    margin: 20px 0 25px 0;
     font-size: 2em;
 }
 
@@ -389,6 +368,7 @@
     border-radius: 4px;
     margin-top: 10px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .sale-label {
@@ -505,6 +485,10 @@
         font-size: 14px;
     }
 
+    .card-name {
+        font-size: 16px;
+    }
+
     .card-img{
         width: 162px;
     }
@@ -592,12 +576,19 @@
         gap: 5.8vw;
     }
 
+    .product-container{
+        width: 98%;
+    }
+
     .product-card-container {
-        margin: 10px auto;
         width: 100%;
         place-items: inherit;
         gap: 17px;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+        .card{
+        width: 90%;
     }
 
     .nav-menu-categories{
@@ -615,7 +606,6 @@
     }
 
     .product-card-container {
-        width: 100%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
