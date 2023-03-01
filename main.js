@@ -1,6 +1,7 @@
 const burger = document.querySelector(".burger-menu")
 const navMenu = document.querySelector(".nav-menu")
 const productsContainer = document.querySelector(".product-card-container")
+const tabButton = document.querySelector(".tab-button")
 
 const laptops = [
     {
@@ -64,6 +65,29 @@ const buildCards = () => {
 
     });
 }
+
+const dropdownBtn = document.getElementById("tab-button");
+const dropdownMenu = document.getElementById("dropdown");
+const toggleArrow = document.getElementById("arrow");
+
+// Toggle dropdown function
+const toggleDropdown = function () {
+  dropdownMenu.classList.toggle("show");
+  toggleArrow.classList.toggle("arrow");
+};
+
+// Toggle dropdown open/close when dropdown button is clicked
+dropdownBtn.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleDropdown();
+});
+
+// Close dropdown when dom element is clicked
+document.documentElement.addEventListener("click", function () {
+  if (dropdownMenu.classList.contains("show")) {
+    toggleDropdown();
+  }
+});
 
 buildCards()
 
