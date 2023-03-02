@@ -40,6 +40,7 @@ const getArrayWithProp = (array, prop, value) => {
     return arrayWithProp
 }
 
-console.log(getCarsWithProp("color", "blue"))
-console.log(getCarsWithProp("size","Medium"))
-console.log(getCarsWithProp("color","Red"))
+console.log(getArrayWithProp(cars ,"color", "blue"))
+console.log(getArrayWithProp(cars ,"size","Medium"))
+console.log(getArrayWithProp(cars ,"color","Red"))
+console.log(getArrayWithProp(cars ,"size","Small"))

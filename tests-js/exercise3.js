@@ -22,7 +22,7 @@ const primeNumbersOnRange = (num1, num2) => {
         num1++
     }
 
-    console.log(`Prime Numbers on the range: ${primes}`)
+    console.log(primes)
 }
 
 primeNumbersOnRange(number1,number2)
