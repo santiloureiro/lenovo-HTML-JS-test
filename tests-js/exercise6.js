@@ -35,26 +35,9 @@ const cars = [
 ]
 
 
-const carsColors = [{
-    red:    [
-    {color: "Red",size: "Small"},
-    {color: "Red",size: "Large"},
-    {color: "Red",size: "Small"},
-    {color: "Red",size: "Medium"}],
-
-    blue: [
-    {color: "Blue",size: "Large"},
-    {color: "Blue",size: "Large"},
-    {color: "Blue",size: "Medium"},
-    {color: "Blue",size: "Large"}
-]
-}]
-
-
-
-const getCarsWithProp = (prop, value) => {
-    const carsWithProp = cars.filter(car => car[prop].toLowerCase()  == value.toLowerCase());
-    return carsWithProp
+const getArrayWithProp = (array, prop, value) => {
+    const arrayWithProp = array.filter(el => el[prop].toLowerCase()  == value.toLowerCase());
+    return arrayWithProp
 }
 
 console.log(getCarsWithProp("color", "blue"))
